@@ -1,0 +1,11 @@
+.listContainer:global(.vtex-tab-layout-0-x-listContainer){
+    background: #2E2E2E;
+}
+    
+.listItemActive:global(.vtex-tab-layout-0-x-listItem){
+    background: #2E2E2E;
+}
+
+.listItemActive:global(.vtex-button__label){
+    background: #2E2E2E;
+}

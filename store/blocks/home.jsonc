@@ -1,15 +1,188 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "rich-text"
+      "tab-layout",
+      "slider-layout#home",
+      "flex-layout.row",
+      "flex-layout.col",
+      "search-result-layout.customQuery#lp"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+  // tab-layout -------------------------------------- 
+  "tab-layout": {
+    "children": [
+      "tab-list"
+    ],
+    "props": {
+      "defaultActiveTabId": "homeCategoria",
+      "blockClass": "categorias"
+    }
+  },
+  "tab-list": {
+    "children": [
+      "tab-list.item#categoria01",
+      "tab-list.item#categoria02",
+      "tab-list.item#categoria03",
+      "tab-list.item#categoria04",
+      "tab-list.item#categoria05",
+      "tab-list.item#categoria06",
+      "tab-list.item#categoria07",
+      "tab-list.item#categoria08"
+    ]
+  },
+  "tab-list.item#categoria01": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "PROMOÇÃO",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria02": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "CORINTHIANS",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria03": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "PALMEIRAS",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria04": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "SÃO PAULO",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria05": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "SANTOS",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria06": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "FLAMENGO",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria07": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "ATLETICO MINEIRO",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#categoria08": {
+    "props": {
+      "tabId": "homeCategoria",
+      "label": "INTERNACIONAL",
+      "defaultActiveTab": true
+    }
+  },
+  // fim tab-layout catehorias ------------------------------------------
+  // flex-layout banner promoção ------------------------------------------
+  "flex-layout.row": {
+    "children": [
+      "rich-text#selecao",
+      "flex-layout.col"
+    ]
+  },
+  "flex-layout.col": {
+    "children": [
+      "rich-text#digitarcategoria"
+    ]
+  },
+  "rich-text#selecao": {
+    "props": {
+      "isFullModeStyle": true,
+      "text": "##### você está vendo provas de #####",
+      "textPosition": "RIGHT",
+      "textAlignment": "RIGHT"
+    }
+  },
+  "rich-text#digitarcategoria": {
+    "props": {
+      "isFullModeStyle": true,
+      "text": "",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT"
+    }
+  },
+  // fim // flex-layout banner promoção ---------------------------------
+  // buscar produtos e lista no home ------------------------------------
+  "search-result-layout.customQuery#lp": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 9
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#lp"      
+    ]
+  },
+  "search-result-layout.desktop#lp": {
+    "children": [
+      "search-content#lp"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-content#lp": {
+    "blocks": [
+      "gallery#lp",
+      "not-found"
+    ]
+  },
+  // fim buscar produtos e lista no home -------------------------
+  // Listar produtos na home -------------------------------------
+  "gallery#lp": {
+    "props": {
+      "layouts": [
+        {
+          "name": "whole",
+          "component": "OneOrTwoLineSummary",
+          "itemsPerRow": {
+            "(min-width: 1200px)": 3,
+            "desktop": 3,
+            "tablet": 1,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 3
+        }
+      ],
+      "OneOrTwoLineSummary": "product-summary.shelf#lp",
+      "ManyByLineSummary": "product-summary.shelf#lp"      
+    }
+  },
+  "product-summary.shelf#lp": {
+    "children": [
+      "product-summary-name",
+      "product-summary-description",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"   
+    ]
+  },
+  "product-summary-image": {
+    "props": {
+      "showBadge": true,
+      "height": "320px",
+      "width": "320px"      
     }
   }
 }

@@ -1,26 +1,70 @@
 {
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
-  },
-  "footer-layout.desktop": { 
-    "children": [
-      "flex-layout.row#footer"
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
     ]
   },
-  "footer-layout.mobile": { 
+  "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#footer-desktoop"
     ]
   },
-  "flex-layout.row#footer": { 
+  "footer-layout.mobile": {
     "children": [
-      "image"
+      "flex-layout.row#footer-mobile"
     ]
   },
-  "image": {
+  "flex-layout.row#footer-desktoop": {
+    "children": [
+      "info-card#suporte",
+      "info-card#aboutus",
+      "social-networks",
+      "accepted-payment-methods"
+    ]
+  },
+  "flex-layout.row#footer-mobile": {
+    "children": [
+      "info-card#suporte",
+      "social-networks",
+      "accepted-payment-methods"
+    ]
+  },
+  "info-card#suporte": {
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "text": "Suporte",
+      "callToActionMode": "link",
+      "callToActionText": "Suporte",
+      "callToActionUrl": "https://web.whatsapp.com/",
+      "textAlignment": "right",
+      "textColor": "c-on-emphasis",
+      "font": "t-heading-5",
+      "blockClass": "suporte"
+    }
+  },  
+  "info-card#aboutus": {
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "text": "Desafio",
+      "callToActionMode": "link",
+      "callToActionText": "Desafio",
+      "callToActionUrl": "https://rbciambarella--hiringcoders2021.myvtex.com/about-us",
+      "textAlignment": "right",
+      "textColor": "c-on-emphasis",
+      "font": "t-heading-5",
+      "blockClass": "aboutus"
+    }
+  },
+  "accepted-payment-methods": {
+    "props": {
+      "paymentMethods": [
+        "mastercard",
+        "visa",
+        "diners club"
+      ]
     }
   }
 }

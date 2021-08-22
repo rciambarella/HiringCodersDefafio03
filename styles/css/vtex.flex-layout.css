@@ -1,0 +1,4 @@
+.flexRow :global(.vtex-flex-layout-0-x-flexRowContent--sticky-header){   
+    background: #2E2E2E;
+    color: #59FF00;
+}

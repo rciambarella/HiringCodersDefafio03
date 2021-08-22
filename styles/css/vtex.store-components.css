@@ -1,0 +1,35 @@
+.imageElement--cover {
+    object-fit: cover;
+  }
+
+.searchBarContainer {
+    background: #2E2E2E;
+    width: 770px;
+    text-align: left;    
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+    border-radius: 2;
+    border-bottom: thin solid white;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+    background: #2E2E2E;
+    color: #59FF00;
+}
+.container {
+    background: #2E2E2E;
+    margin-top: 10px;
+  }
+  .productNameContainer :global(.vtex-store-components-3-x-productBrand){
+    color: #59FF00;
+  }
+  .stretchChildrenWidth :global(.vtex-store-components-3-x-shippingContainer){
+    color: #59FF00;
+  }
+ .infoCardCallActionContainer :global(.vtex-store-components-3-x-infoCardCallActionText--suporte){
+    font-size: 20px;
+    color: #59FF00;
+ }
+ .infoCardCallActionContainer :global(.vtex-store-components-3-x-infoCardCallActionText--aboutus){
+  font-size: 20px;
+  color: #59FF00;
+}

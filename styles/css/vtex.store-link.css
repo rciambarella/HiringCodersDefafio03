@@ -1,0 +1,5 @@
+.link--aboutus :global(.vtex-store-link-0-x-label){
+    color: #59FF00;
+    text-align: justify;
+    font-size: 20px;
+  }
